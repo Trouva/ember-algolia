@@ -1,0 +1,24 @@
+<div class="filter-range-slider--header filter-header">{{yield}}</div>
+
+{{ember-algolia/simple-range-slider
+  start=start
+  margin=margin
+  animate=animate
+  snap=snap
+  connect=connect
+  disabled=disabled
+  orientation=orientation
+  direction=direction
+  behaviour=behaviour
+  tooltips=tooltips
+  limit=limit
+  pips=pips
+  step=step
+  min=min
+  max=max
+
+  formatTo=formatTo
+  formatFrom=formatFrom
+
+  on-change=(action 'change')
+}}

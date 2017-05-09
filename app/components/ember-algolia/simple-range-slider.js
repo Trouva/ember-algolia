@@ -1,0 +1,1 @@
+export { default } from 'ember-algolia/components/simple-range-slider';
