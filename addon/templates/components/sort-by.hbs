@@ -1,0 +1,8 @@
+<select class="ais-sort-by-selector select" onchange={{action 'changeSortBy'}}>
+  {{#each indices as |index|}}
+    <option class="ais-sort-by-selector--item" value={{index.name}} selected={{eq index.name selected.name}}>
+      {{index.label}}
+    </option>
+  {{/each}}
+</select>
+{{yield}}
