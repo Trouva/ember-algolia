@@ -1,0 +1,50 @@
+<ul class="ais-pagination nav-pagination">
+
+  {{#if _hasPreviousButton}}
+    <li class="ais-pagination--item ais-pagination--item__previous">
+      <a
+        class="ais-pagination--link"
+        href={{_firstPage}}
+        onclick={{action 'changePage' _lastPageNum}}
+      >
+        «
+      </a>
+    </li>
+    <li class="ais-pagination--item ais-pagination--item__previous">
+      <a
+        class="ais-pagination--link"
+        href={{_previousPage}}
+        onclick={{action 'changePage' _lastPageNum}}
+      >
+        Previous
+      </a>
+    </li>
+  {{/if}}
+
+  {{#each _options as |option|}}
+    {{ember-algolia/pagination/item item=option onSelect=(action 'changePage')}}
+  {{/each}}
+
+  {{#if _hasNextButton}}
+    <li class="ais-pagination--item ais-pagination--item__next">
+      <a class="ais-pagination--link"
+        href={{_nextPage}}
+        onclick={{action 'changePage' _nextPageNum}}
+      >
+        Next
+      </a>
+    </li>
+
+    <li class="ais-pagination--item ais-pagination--item__next">
+      <a class="ais-pagination--link"
+        href={{_lastPage}}
+        onclick={{action 'changePage' _lastPageNum}}
+      >
+        »
+      </a>
+    </li>
+  {{/if}}
+
+</ul>
+
+{{yield}}

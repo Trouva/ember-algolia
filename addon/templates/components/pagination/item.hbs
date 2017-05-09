@@ -1,0 +1,12 @@
+{{#if (eq item.display '...')}}
+  <span>...</span>
+{{else}}
+  <a
+    class="ais-pagination--link"
+    href={{if item.href item.href ''}}
+    onclick={{action onSelect item.value}}
+  >
+    {{item.display}}
+  </a>
+{{/if}}
+{{yield}}
