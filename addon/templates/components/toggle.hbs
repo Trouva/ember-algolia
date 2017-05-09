@@ -1,0 +1,15 @@
+<div class="ais-toggle--header ais-header">{{yield}}</div>
+<div class="ais-body ais-toggle--body">
+  <div class="ais-toggle--list">
+    <div class="ais-toggle--item">
+      <div>
+        <label class="ais-toggle--label">
+          <input type="checkbox" class="ais-toggle--checkbox" value={{label}}
+          checked={{isRefined}}
+          {{action 'toggleFilter'}}>
+          {{label}}
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
