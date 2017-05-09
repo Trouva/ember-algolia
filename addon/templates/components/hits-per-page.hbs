@@ -1,0 +1,9 @@
+<select class="ais-hits-per-page-selector select" onchange={{action 'changeHitsPerPage'}}>
+  {{#each options as |option|}}
+    <option class="ais-hits-per-page-selector select" value={{option.value}} selected={{eq option.value selected.value}}>
+      {{option.label}}
+    </option>
+  {{/each}}
+</select>
+
+{{yield}}
