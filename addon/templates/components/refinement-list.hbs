@@ -1,0 +1,19 @@
+{{#if hasOptions}}
+  <div class="ais-refinement-list--header ais-header">{{yield}}</div>
+  <div class="ais-refinement-list--body">
+    <ul class="ais-refinement-list--list">
+      {{#each _options as |option|}}
+        <li class="ais-refinement-list--item">
+          <label class="ais-refinement-list--label">
+            <input
+              onchange={{action (if option.isRefined 'removeFilter' 'addFilter') option}}
+              checked={{option.isRefined}}
+              type="checkbox" class="ais-refinement-list--checkbox"
+              />
+            {{option.name}}
+          </label>
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+{{/if}}
