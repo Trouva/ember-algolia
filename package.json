@@ -18,8 +18,11 @@
     "test": "ember try:each"
   },
   "dependencies": {
+    "algoliasearch": "^3.22.1",
+    "algoliasearch-helper": "^2.20.1",
     "ember-cli-babel": "^5.1.7",
     "ember-cli-htmlbars": "^1.1.1",
+    "ember-get-config": "^0.2.1",
     "query-string": "^4.3.4"
   },
   "devDependencies": {
